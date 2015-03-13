@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="226247" started-at="2015-03-13T09:34:15Z" finished-at="2015-03-13T09:38:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="226247" started-at="2015-03-13T09:34:15Z" finished-at="2015-03-13T09:38:01Z">
+      <class name="tests.SubscribeAlertReportTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="initialize" is-config="true" duration-ms="7948" started-at="2015-03-13T15:04:07Z" finished-at="2015-03-13T15:04:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="isSkipped()[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="isSkipped" is-config="true" duration-ms="13" started-at="2015-03-13T15:04:15Z" finished-at="2015-03-13T15:04:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkipped -->
+        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="14529" started-at="2015-03-13T15:04:15Z" data-provider="getData" finished-at="2015-03-13T15:04:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Report_Subscribtion]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Alert reports]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[All alert reports subscription create and update operations]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertSubscriptionTest -->
+        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="35203" started-at="2015-03-13T15:04:29Z" data-provider="getData" finished-at="2015-03-13T15:05:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Report_Subscribtion]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Delete alert reports]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[All alert reports subscription delete operation]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Record Deleted Successfully]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertSubscriptionTest -->
+        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="43265" started-at="2015-03-13T15:05:05Z" data-provider="getData" finished-at="2015-03-13T15:05:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Report_Subscribtion]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Exception reports]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[All exception reports subscription crud operations]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertSubscriptionTest -->
+        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="67459" started-at="2015-03-13T15:05:48Z" data-provider="getData" finished-at="2015-03-13T15:06:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Report_Subscribtion]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Inventory reports]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[All inventroy reports subscription crud operations]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertSubscriptionTest -->
+        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="33396" started-at="2015-03-13T15:06:55Z" data-provider="getData" finished-at="2015-03-13T15:07:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Report_Subscribtion]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Project reports]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[All project reports subscription crud operations]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0.0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertSubscriptionTest -->
+        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="32361" started-at="2015-03-13T15:07:29Z" data-provider="getData" finished-at="2015-03-13T15:08:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Report_Subscribtion]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[SREC and Finance reports]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[All SREC and Finance reports subscription crud operations]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0.0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertSubscriptionTest -->
+      </class> <!-- tests.SubscribeAlertReportTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
