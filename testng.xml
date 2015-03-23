@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Diaspark Energy Suite">
+
+<listeners>
+    <listener class-name="listener.TestsListenerAdapter" />
+</listeners>
+
+<test name="Test Base">
+    <classes>
+        <class name="tests.TestBase" ></class>  
+    </classes>
+</test>
+
+<test name="Login Test">
+    <classes>
+        <class name="tests.LoginTest" ></class>  
+    </classes>
+</test>
+<test name=" OperationalView_ProjectViewTest">
+    <classes>
+        <class name="tests.OperationalView_ProjectViewTest" ></class>  
+    </classes>
+</test>
+<test name="OperationalView_ReportViewTest Test">
+    <classes>
+        <class name="tests.OperationalView_ReportViewTest" ></class>  
+    </classes>
+</test>
+
+
+
+</suite>

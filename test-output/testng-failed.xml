@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Diaspark Energy Suite]">
+  <listeners>
+    <listener class-name="listener.TestsListenerAdapter"/>
+  </listeners>
+  <test name="Login Test(failed)">
+    <classes>
+      <class name="tests.OperationalView_ProjectViewTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.OperationalView_ProjectViewTest -->
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="login"/>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.OperationalView_ReportViewTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.OperationalView_ReportViewTest -->
+    </classes>
+  </test> <!-- Login Test(failed) -->
+  <test name="OperationalView_ReportViewTest Test(failed)">
+    <classes>
+      <class name="tests.OperationalView_ProjectViewTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.OperationalView_ProjectViewTest -->
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.OperationalView_ReportViewTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="OperationalView_ReportView"/>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.OperationalView_ReportViewTest -->
+    </classes>
+  </test> <!-- OperationalView_ReportViewTest Test(failed) -->
+</suite> <!-- Failed suite [Diaspark Energy Suite] -->

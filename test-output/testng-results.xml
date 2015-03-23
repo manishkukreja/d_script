@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="5" failed="0" total="10" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Diaspark Energy Suite" duration-ms="513195" started-at="2015-03-23T11:31:39Z" finished-at="2015-03-23T11:40:12Z">
+    <groups>
+    </groups>
+    <test name="Test Base" duration-ms="5" started-at="2015-03-23T11:31:39Z" finished-at="2015-03-23T11:31:39Z">
+    </test> <!-- Test Base -->
+    <test name="Login Test" duration-ms="41" started-at="2015-03-23T11:31:39Z" finished-at="2015-03-23T11:31:39Z">
+      <class name="tests.LoginTest">
+        <test-method status="SKIP" signature="isSkipped()[pri:0, instance:tests.LoginTest@911ed70]" name="isSkipped" is-config="true" duration-ms="0" started-at="2015-03-23T17:01:39Z" finished-at="2015-03-23T17:01:39Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Runmode set to No]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Runmode set to No
+	at tests.LoginTest.isSkipped(LoginTest.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkipped -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTest@911ed70]" name="login" duration-ms="1" started-at="2015-03-23T17:01:39Z" data-provider="getData" finished-at="2015-03-23T17:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Login]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Enter Wrong UserName and Right Password.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[fdfdfdf]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTest@911ed70]" name="login" duration-ms="0" started-at="2015-03-23T17:01:39Z" data-provider="getData" finished-at="2015-03-23T17:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Login]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Enter Right UserName and Wrong Password.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[sumit]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTest@911ed70]" name="login" duration-ms="1" started-at="2015-03-23T17:01:39Z" data-provider="getData" finished-at="2015-03-23T17:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Login]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Enter Wrong UserName and Wrong Password.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[fdfdfdf]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[sumit]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTest@911ed70]" name="login" duration-ms="1" started-at="2015-03-23T17:01:39Z" data-provider="getData" finished-at="2015-03-23T17:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Login]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Enter Right UserName and Right Password.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- tests.LoginTest -->
+    </test> <!-- Login Test -->
+    <test name=" OperationalView_ProjectViewTest" duration-ms="513124" started-at="2015-03-23T11:31:39Z" finished-at="2015-03-23T11:40:12Z">
+      <class name="tests.OperationalView_ProjectViewTest">
+        <test-method status="PASS" signature="isSkipped()[pri:0, instance:tests.OperationalView_ProjectViewTest@4382b300]" name="isSkipped" is-config="true" duration-ms="1" started-at="2015-03-23T17:01:39Z" finished-at="2015-03-23T17:01:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkipped -->
+        <test-method status="PASS" signature="OperationalView_ProjectView(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.OperationalView_ProjectViewTest@4382b300]" name="OperationalView_ProjectView" duration-ms="215552" started-at="2015-03-23T17:01:39Z" data-provider="getData" finished-at="2015-03-23T17:05:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[OperationalView_ProjectView]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Clicking on Download Equipment Data link, Component Data page should be open]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OperationalView_ProjectView -->
+        <test-method status="PASS" signature="OperationalView_ProjectView(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.OperationalView_ProjectViewTest@4382b300]" name="OperationalView_ProjectView" duration-ms="30590" started-at="2015-03-23T17:05:14Z" data-provider="getData" finished-at="2015-03-23T17:05:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[OperationalView_ProjectView]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Clicked on Download Equipment Data.Component Data page will open.do not click on select component and click on View report.Should not go to next page.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OperationalView_ProjectView -->
+        <test-method status="PASS" signature="OperationalView_ProjectView(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.OperationalView_ProjectViewTest@4382b300]" name="OperationalView_ProjectView" duration-ms="64372" started-at="2015-03-23T17:05:45Z" data-provider="getData" finished-at="2015-03-23T17:06:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[OperationalView_ProjectView]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Clicked on Download Equipment Data.Component Data page will open.clicking on select component then clicking on View Report.Should go to the next page.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OperationalView_ProjectView -->
+        <test-method status="PASS" signature="OperationalView_ProjectView(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.OperationalView_ProjectViewTest@4382b300]" name="OperationalView_ProjectView" duration-ms="59868" started-at="2015-03-23T17:06:49Z" data-provider="getData" finished-at="2015-03-23T17:07:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[OperationalView_ProjectView]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Clicking on EquipmentLevelSummary link.Component Level Summary page should be open.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OperationalView_ProjectView -->
+        <test-method status="PASS" signature="OperationalView_ProjectView(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.OperationalView_ProjectViewTest@4382b300]" name="OperationalView_ProjectView" duration-ms="142732" started-at="2015-03-23T17:07:49Z" data-provider="getData" finished-at="2015-03-23T17:10:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[OperationalView_ProjectView]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Clicked on Equipment Level Summary,Component Level Summary page will open.clicking on Download Equipment ]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OperationalView_ProjectView -->
+      </class> <!-- tests.OperationalView_ProjectViewTest -->
+    </test> <!--  OperationalView_ProjectViewTest -->
+    <test name="OperationalView_ReportViewTest Test" duration-ms="3" started-at="2015-03-23T11:40:12Z" finished-at="2015-03-23T11:40:12Z">
+      <class name="tests.OperationalView_ReportViewTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.OperationalView_ReportViewTest@60cd375d]" name="initialize" is-config="true" duration-ms="4585" started-at="2015-03-23T17:01:34Z" finished-at="2015-03-23T17:01:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="SKIP" signature="isSkipped()[pri:0, instance:tests.OperationalView_ReportViewTest@60cd375d]" name="isSkipped" is-config="true" duration-ms="0" started-at="2015-03-23T17:10:12Z" finished-at="2015-03-23T17:10:12Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Runmode set to No]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Runmode set to No
+	at tests.OperationalView_ReportViewTest.isSkipped(OperationalView_ReportViewTest.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkipped -->
+        <test-method status="SKIP" signature="OperationalView_ReportView(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.OperationalView_ReportViewTest@60cd375d]" name="OperationalView_ReportView" duration-ms="1" started-at="2015-03-23T17:10:12Z" data-provider="getData" finished-at="2015-03-23T17:10:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Application]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[OperationalView_ReportView]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Links are working or not]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Energy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[renewable]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OperationalView_ReportView -->
+      </class> <!-- tests.OperationalView_ReportViewTest -->
+    </test> <!-- OperationalView_ReportViewTest Test -->
+  </suite> <!-- Diaspark Energy Suite -->
+</testng-results>
