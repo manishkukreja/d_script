@@ -12,6 +12,14 @@ import util.ErrorUtil;
 import util.TestUtil;
 
 public class LoginTest extends TestBase{
+	
+	public static String DEVKEY="8ef8a1f17390630e97188fde7bd0a4c4";
+	public static String URL="http://10.20.20.18:81/testlink/login.php?";
+	String testProject="Gmail";
+	String testPlan="SampleTestPlan";
+	String testCase="GmailLogin1";
+	String build="SampleBuild";
+	
 	@BeforeTest
 	public void isSkipped(){
 		if(TestUtil.isSkip("LoginTest"))
@@ -21,6 +29,7 @@ public class LoginTest extends TestBase{
 	@Test(dataProvider="getData")
 	public void login(String SrNo,String Feature,String Use_Case,String Test_Case,String Provider,String Username, String Password,String testType ) throws Exception,InterruptedException, IOException{
 		TestUtil.login(Username,Password,Use_Case);
+		System.out.println(driver.getTitle()+ "this is the login method and page title --------------");
 		TestUtil.logout();
 			
 		}

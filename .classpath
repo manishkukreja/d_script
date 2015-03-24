@@ -70,5 +70,10 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/manish/Desktop/bITs/inStallerS/jexcelapi/jxl.jar"/>
+	<classpathentry kind="lib" path="/home/manish/Desktop/bITs/inStallerS/testlink-api-client-20091130/testlink-api-client-2.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/home/manish/Desktop/bITs/inStallerS/testlink-api-client-20091130/javadoc/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="6" passed="6">
+<testng-results skipped="0" failed="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="226247" started-at="2015-03-13T09:34:15Z" finished-at="2015-03-13T09:38:01Z">
+  <suite name="Default suite" duration-ms="125241" started-at="2015-03-20T10:22:09Z" finished-at="2015-03-20T10:24:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="226247" started-at="2015-03-13T09:34:15Z" finished-at="2015-03-13T09:38:01Z">
-      <class name="tests.SubscribeAlertReportTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="initialize" is-config="true" duration-ms="7948" started-at="2015-03-13T15:04:07Z" finished-at="2015-03-13T15:04:15Z">
+    <test name="Default test" duration-ms="125241" started-at="2015-03-20T10:22:09Z" finished-at="2015-03-20T10:24:14Z">
+      <class name="tests.LoginTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.LoginTest@a4480d]" name="initialize" is-config="true" duration-ms="23430" started-at="2015-03-20T15:51:45Z" finished-at="2015-03-20T15:52:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="isSkipped()[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="isSkipped" is-config="true" duration-ms="13" started-at="2015-03-13T15:04:15Z" finished-at="2015-03-13T15:04:15Z">
+        <test-method status="PASS" signature="isSkipped()[pri:0, instance:tests.LoginTest@a4480d]" name="isSkipped" is-config="true" duration-ms="1019" started-at="2015-03-20T15:52:09Z" finished-at="2015-03-20T15:52:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSkipped -->
-        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="14529" started-at="2015-03-13T15:04:15Z" data-provider="getData" finished-at="2015-03-13T15:04:29Z">
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTest@a4480d]" name="login" duration-ms="41857" started-at="2015-03-20T15:52:10Z" data-provider="getData" finished-at="2015-03-20T15:52:52Z">
           <params>
             <param index="0">
               <value>
@@ -29,49 +29,112 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Report_Subscribtion]]>
+                <![CDATA[login]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Alert reports]]>
+                <![CDATA[Enter Wrong UserName and Right Password.]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[All alert reports subscription create and update operations]]>
+                <![CDATA[Energy]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[Energy]]>
+                <![CDATA[test]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[admin]]>
+                <![CDATA[renewable]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[renewable]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[]]>
+                <![CDATA[1.0]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/form/div[3]/div/div[2]/ul/li[3]/a/span"}
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'manish-3010', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'i386', os.version: '3.13.0-46-generic', java.version: '1.7.0_75'
+Session ID: 6ae59866-9b59-4fc6-ac83-65d4c21ff1ed
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/form/div[3]/div/div[2]/ul/li[3]/a/span"}
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'manish-3010', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'i386', os.version: '3.13.0-46-generic', java.version: '1.7.0_75'
+Session ID: 6ae59866-9b59-4fc6-ac83-65d4c21ff1ed
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at util.TestUtil.logout(TestUtil.java:196)
+	at tests.LoginTest.login(LoginTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"xpath","selector":"html/body/form/div[3]/div/div[2]/ul/li[3]/a/span"}
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'manish-3010', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'i386', os.version: '3.13.0-46-generic', java.version: '1.7.0_75'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///tmp/anonymous8698762900259120885webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8860)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///tmp/anonymous8698762900259120885webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- alertSubscriptionTest -->
-        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="35203" started-at="2015-03-13T15:04:29Z" data-provider="getData" finished-at="2015-03-13T15:05:05Z">
+        </test-method> <!-- login -->
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTest@a4480d]" name="login" duration-ms="31946" started-at="2015-03-20T15:52:52Z" data-provider="getData" finished-at="2015-03-20T15:53:24Z">
           <params>
             <param index="0">
               <value>
@@ -85,49 +148,111 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Report_Subscribtion]]>
+                <![CDATA[login]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Delete alert reports]]>
+                <![CDATA[Enter Right UserName and Wrong Password.]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[All alert reports subscription delete operation]]>
+                <![CDATA[Energy]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[Energy]]>
+                <![CDATA[admin]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[admin]]>
+                <![CDATA[test]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[renewable]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[Record Deleted Successfully]]>
+                <![CDATA[1.0]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/form/div[3]/div/div[2]/ul/li[3]/a/span"}
+Command duration or timeout: 30.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'manish-3010', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'i386', os.version: '3.13.0-46-generic', java.version: '1.7.0_75'
+Session ID: 6ae59866-9b59-4fc6-ac83-65d4c21ff1ed
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/form/div[3]/div/div[2]/ul/li[3]/a/span"}
+Command duration or timeout: 30.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'manish-3010', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'i386', os.version: '3.13.0-46-generic', java.version: '1.7.0_75'
+Session ID: 6ae59866-9b59-4fc6-ac83-65d4c21ff1ed
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at util.TestUtil.logout(TestUtil.java:196)
+	at tests.LoginTest.login(LoginTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"xpath","selector":"html/body/form/div[3]/div/div[2]/ul/li[3]/a/span"}
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'manish-3010', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'i386', os.version: '3.13.0-46-generic', java.version: '1.7.0_75'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///tmp/anonymous8698762900259120885webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8860)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///tmp/anonymous8698762900259120885webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- alertSubscriptionTest -->
-        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="43265" started-at="2015-03-13T15:05:05Z" data-provider="getData" finished-at="2015-03-13T15:05:48Z">
+        </test-method> <!-- login -->
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTest@a4480d]" name="login" duration-ms="31889" started-at="2015-03-20T15:53:24Z" data-provider="getData" finished-at="2015-03-20T15:53:56Z">
           <params>
             <param index="0">
               <value>
@@ -141,49 +266,111 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Report_Subscribtion]]>
+                <![CDATA[login]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Exception reports]]>
+                <![CDATA[Enter Wrong UserName and Wrong Password.]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[All exception reports subscription crud operations]]>
+                <![CDATA[Energy]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[Energy]]>
+                <![CDATA[test]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[admin]]>
+                <![CDATA[test]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[renewable]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[]]>
+                <![CDATA[1.0]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/form/div[3]/div/div[2]/ul/li[3]/a/span"}
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'manish-3010', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'i386', os.version: '3.13.0-46-generic', java.version: '1.7.0_75'
+Session ID: 6ae59866-9b59-4fc6-ac83-65d4c21ff1ed
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/form/div[3]/div/div[2]/ul/li[3]/a/span"}
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'manish-3010', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'i386', os.version: '3.13.0-46-generic', java.version: '1.7.0_75'
+Session ID: 6ae59866-9b59-4fc6-ac83-65d4c21ff1ed
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at com.sun.proxy.$Proxy8.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
+	at util.TestUtil.logout(TestUtil.java:196)
+	at tests.LoginTest.login(LoginTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"xpath","selector":"html/body/form/div[3]/div/div[2]/ul/li[3]/a/span"}
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'manish-3010', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'i386', os.version: '3.13.0-46-generic', java.version: '1.7.0_75'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///tmp/anonymous8698762900259120885webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8860)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///tmp/anonymous8698762900259120885webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- alertSubscriptionTest -->
-        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="67459" started-at="2015-03-13T15:05:48Z" data-provider="getData" finished-at="2015-03-13T15:06:55Z">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTest@a4480d]" name="login" duration-ms="18167" started-at="2015-03-20T15:53:56Z" data-provider="getData" finished-at="2015-03-20T15:54:14Z">
           <params>
             <param index="0">
               <value>
@@ -197,161 +384,39 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Report_Subscribtion]]>
+                <![CDATA[login]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Inventory reports]]>
+                <![CDATA[Enter Right UserName and Right Password.]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[All inventroy reports subscription crud operations]]>
+                <![CDATA[Energy]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[Energy]]>
+                <![CDATA[admin]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[admin]]>
+                <![CDATA[renewable]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[renewable]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[]]>
+                <![CDATA[1.0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- alertSubscriptionTest -->
-        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="33396" started-at="2015-03-13T15:06:55Z" data-provider="getData" finished-at="2015-03-13T15:07:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5.0]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Application]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Report_Subscribtion]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Project reports]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[All project reports subscription crud operations]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Energy]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[renewable]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[0.0]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- alertSubscriptionTest -->
-        <test-method status="PASS" signature="alertSubscriptionTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SubscribeAlertReportTest@73a403]" name="alertSubscriptionTest" duration-ms="32361" started-at="2015-03-13T15:07:29Z" data-provider="getData" finished-at="2015-03-13T15:08:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[6.0]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Application]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Report_Subscribtion]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[SREC and Finance reports]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[All SREC and Finance reports subscription crud operations]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Energy]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[renewable]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[0.0]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- alertSubscriptionTest -->
-      </class> <!-- tests.SubscribeAlertReportTest -->
+        </test-method> <!-- login -->
+      </class> <!-- tests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

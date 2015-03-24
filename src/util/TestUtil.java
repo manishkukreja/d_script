@@ -95,7 +95,7 @@ public class TestUtil extends TestBase{
 	    	
 	    	driver.findElement(By.id("btnLogin")).click();
 	    	
-	    	System.out.println("Page title is: " + driver.getTitle());
+//	    	System.out.println("Page title is: " + driver.getTitle());
 	    	
 	    	ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Login"); // file_path , file_name and sheet_name are passed 
 			String actual;
