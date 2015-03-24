@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package utility;
 
 import org.apache.log4j.Logger;
@@ -23,3 +24,17 @@ public class Constant {
 		public static String PARENT=null;
 	
 }
+=======
+package utility;
+
+public class Constant {
+	
+     public static final String Path_TestData = "/home/manish/Desktop/bITs/workspace/selinium/DiasparkEnergy/src/testData/";
+     
+     public static final String File_TestData = "TestData.xlsx";
+
+	   	public static final String KEYWORD_FAIL = "FAIL";
+	   	public static final String KEYWORD_PASS = "PASS";
+	
+}
+>>>>>>> 414c2983c9de47ba534f12add8583362dbd8e871
