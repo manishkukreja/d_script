@@ -40,16 +40,16 @@ public class TestBase {
 		APPLICATION_LOGS.debug("Starting the test suite");
 		APPLICATION_LOGS.debug("Loading config files");
 	    config = new Properties();
-		FileInputStream fp = new FileInputStream(System.getProperty("user.dir")+"\\src\\config\\config.properties");
+		FileInputStream fp = new FileInputStream(System.getProperty("user.dir")+"/src/config/config.properties");
 		config.load(fp);
 		
 		// load my xpaths
 		APPLICATION_LOGS.debug("Loading Object XPATHS");
 		OR = new Properties();
-		 fp = new FileInputStream(System.getProperty("user.dir")+"\\src\\config\\OR.properties");
+		 fp = new FileInputStream(System.getProperty("user.dir")+"/src/config/OR.properties");
 		OR.load(fp);
 		// initilize datatable
-		datatable=new Xls_Reader(System.getProperty("user.dir")+"\\src\\config\\Controller.xlsx");
+		datatable=new Xls_Reader(System.getProperty("user.dir")+"/src/config/Controller.xlsx");
 		System.out.println(config.getProperty("browserType"));
 		if(config.getProperty("browserType").equals("Firefox")){
 			 wbDv = new FirefoxDriver();
@@ -57,7 +57,7 @@ public class TestBase {
 			{
 			  if(config.getProperty("browserType").equals("chrome"))
 			  {
-				  File chromeDriver = new File("D:\\DiasparkEnergy\\DiasparkEnergy\\chromedriver.exe");
+				  File chromeDriver = new File("/home/manish/Desktop/bITs/workspace/selinium/DiasparkEnergy/chromedriver.exe");
 				  System.setProperty("webdriver.chrome.driver", chromeDriver.getAbsolutePath() );  
 				  wbDv = new ChromeDriver();
 			    
