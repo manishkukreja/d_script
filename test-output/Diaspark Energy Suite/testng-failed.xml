@@ -6,44 +6,16 @@
   </listeners>
   <test name="Login Test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="tests.OperationalView_ProjectViewTest">
-        <methods>
-          <include name="isSkipped"/>
-        </methods>
-      </class> <!-- tests.OperationalView_ProjectViewTest -->
-      <class name="tests.LoginTest">
-        <methods>
-          <include name="login"/>
-          <include name="isSkipped"/>
-        </methods>
-      </class> <!-- tests.LoginTest -->
       <class name="tests.OperationalView_ReportViewTest">
         <methods>
-          <include name="initialize"/>
           <include name="isSkipped"/>
         </methods>
       </class> <!-- tests.OperationalView_ReportViewTest -->
-    </classes>
-  </test> <!-- Login Test(failed) -->
-  <test name="OperationalView_ReportViewTest Test(failed)">
-    <classes>
       <class name="tests.OperationalView_ProjectViewTest">
         <methods>
           <include name="isSkipped"/>
         </methods>
       </class> <!-- tests.OperationalView_ProjectViewTest -->
-=======
-      <class name="tests.ProjectOverviewPageTest">
-        <methods>
-          <include name="isSkipped"/>
-        </methods>
-      </class> <!-- tests.ProjectOverviewPageTest -->
-      <class name="tests.PortfolioTest">
-        <methods>
-          <include name="isSkipped"/>
-        </methods>
-      </class> <!-- tests.PortfolioTest -->
       <class name="tests.ProjectOperationPlannedOutagePageTest">
         <methods>
           <include name="isSkipped"/>
@@ -56,59 +28,118 @@
           <include name="isSkipped"/>
         </methods>
       </class> <!-- tests.LoginTest -->
-    </classes>
-  </test> <!-- Login Test(failed) -->
-  <test name="Portfolio Test(failed)">
-    <classes>
       <class name="tests.ProjectOverviewPageTest">
         <methods>
           <include name="isSkipped"/>
         </methods>
       </class> <!-- tests.ProjectOverviewPageTest -->
-      <class name="tests.PortfolioTest">
+    </classes>
+  </test> <!-- Login Test(failed) -->
+  <test name=" OperationalView_ProjectViewTest(failed)">
+    <classes>
+      <class name="tests.OperationalView_ReportViewTest">
         <methods>
           <include name="isSkipped"/>
-          <include name="Portfolio"/>
         </methods>
-      </class> <!-- tests.PortfolioTest -->
->>>>>>> 414c2983c9de47ba534f12add8583362dbd8e871
+      </class> <!-- tests.OperationalView_ReportViewTest -->
+      <class name="tests.OperationalView_ProjectViewTest">
+        <methods>
+          <include name="isSkipped"/>
+          <include name="OperationalView_ProjectView"/>
+        </methods>
+      </class> <!-- tests.OperationalView_ProjectViewTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="isSkipped"/>
         </methods>
       </class> <!-- tests.LoginTest -->
-<<<<<<< HEAD
+      <class name="tests.ProjectOperationPlannedOutagePageTest">
+        <methods>
+          <include name="isSkipped"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- tests.ProjectOperationPlannedOutagePageTest -->
+      <class name="tests.ProjectOverviewPageTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.ProjectOverviewPageTest -->
+    </classes>
+  </test> <!--  OperationalView_ProjectViewTest(failed) -->
+  <test name="OperationalView_ReportViewTest Test(failed)">
+    <classes>
       <class name="tests.OperationalView_ReportViewTest">
         <methods>
-          <include name="initialize"/>
           <include name="OperationalView_ReportView"/>
           <include name="isSkipped"/>
         </methods>
       </class> <!-- tests.OperationalView_ReportViewTest -->
-    </classes>
-  </test> <!-- OperationalView_ReportViewTest Test(failed) -->
-=======
+      <class name="tests.OperationalView_ProjectViewTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.OperationalView_ProjectViewTest -->
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
       <class name="tests.ProjectOperationPlannedOutagePageTest">
         <methods>
           <include name="isSkipped"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- tests.ProjectOperationPlannedOutagePageTest -->
-    </classes>
-  </test> <!-- Portfolio Test(failed) -->
-  <test name="Project Overview Test(failed)">
-    <classes>
-      <class name="tests.PortfolioTest">
+      <class name="tests.ProjectOverviewPageTest">
         <methods>
           <include name="isSkipped"/>
         </methods>
-      </class> <!-- tests.PortfolioTest -->
+      </class> <!-- tests.ProjectOverviewPageTest -->
+    </classes>
+  </test> <!-- OperationalView_ReportViewTest Test(failed) -->
+  <test name="Project Overview Test(failed)">
+    <classes>
+      <class name="tests.OperationalView_ReportViewTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.OperationalView_ReportViewTest -->
+      <class name="tests.OperationalView_ProjectViewTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.OperationalView_ProjectViewTest -->
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.ProjectOperationPlannedOutagePageTest">
+        <methods>
+          <include name="isSkipped"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- tests.ProjectOperationPlannedOutagePageTest -->
       <class name="tests.ProjectOverviewPageTest">
         <methods>
           <include name="projectOverviewPage"/>
           <include name="isSkipped"/>
         </methods>
       </class> <!-- tests.ProjectOverviewPageTest -->
+    </classes>
+  </test> <!-- Project Overview Test(failed) -->
+  <test name="Project Operation Test(failed)">
+    <classes>
+      <class name="tests.OperationalView_ReportViewTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.OperationalView_ReportViewTest -->
+      <class name="tests.OperationalView_ProjectViewTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.OperationalView_ProjectViewTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="isSkipped"/>
@@ -118,9 +149,14 @@
         <methods>
           <include name="isSkipped"/>
           <include name="initialize"/>
+          <include name="plannedOutagePage" invocation-numbers="1"/>
         </methods>
       </class> <!-- tests.ProjectOperationPlannedOutagePageTest -->
+      <class name="tests.ProjectOverviewPageTest">
+        <methods>
+          <include name="isSkipped"/>
+        </methods>
+      </class> <!-- tests.ProjectOverviewPageTest -->
     </classes>
-  </test> <!-- Project Overview Test(failed) -->
->>>>>>> 414c2983c9de47ba534f12add8583362dbd8e871
+  </test> <!-- Project Operation Test(failed) -->
 </suite> <!-- Failed suite [Diaspark Energy Suite] -->

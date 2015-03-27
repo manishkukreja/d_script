@@ -21,14 +21,15 @@ public class SubscribeAlertReportTest extends TestBase {
 	public static void alertSubscriptionTest(String SrNo,String Feature,String Use_Case,String Scenario,String Test_Case,String Provider,String Username, String Password, String testType, String expectedOutput) throws Exception  
 	{
 		TestUtil.login(Username, Password, Use_Case);
-		if(testType.equalsIgnoreCase("True"))
+		TestUtil.alertReportSubscription(Scenario , Test_Case, expectedOutput);
+		/*if(testType.equalsIgnoreCase("True"))
 			{										
 				TestUtil.alertReportSubscription(Scenario , Test_Case, expectedOutput);
 			}
 		else
 			{
 				System.out.println("Please change the Test Type to start the execution");
-			}
+			}*/
 	}			
 				
 	@DataProvider

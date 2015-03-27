@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package util;
 import static org.testng.AssertJUnit.assertTrue;
 
@@ -17,6 +16,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -27,40 +27,39 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import junit.framework.Assert;
-import jxl.Workbook;
+//import jxl.Workbook;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
-
-import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+
 import tests.TestBase;
 import utility.Constant;
 import utility.ExcelUtils;
 import utility.ExcelWrite;
-import utility.Log;
+
 
 public class TestUtil extends TestBase{
 
 	public static WebElement ELEMENT;
 	public static String ACTUAL;
 	public static String records;
-	private static Logger Log = Logger.getLogger(TestUtil.class.getName());
+
 	public static int WRITE_EXCEL_ROW=1;public static int DBROWS=0;
-	public static String PARENT=null;
+	public static String PARENT=null;public static String master=null;
 	
 	
 	
@@ -82,10 +81,13 @@ public class TestUtil extends TestBase{
 	}
 	public static void excelWrite(int WRITE_EXCEL_ROW,String ACTUAL,String Use_Case) throws Exception
 	{
+		System.out.println("in excel write method");
 		ExcelWrite a=new ExcelWrite();
 		if(ACTUAL.equalsIgnoreCase(ExcelUtils.getCellData(WRITE_EXCEL_ROW, 3)))
 		   {
 			    String excpected=ExcelUtils.getCellData(WRITE_EXCEL_ROW, 3);
+			    System.out.println("((((   "+excpected);
+			    System.out.println("going to compare result method");
 		 	    a.compareResult(excpected,ACTUAL,WRITE_EXCEL_ROW,Use_Case);
 		        ExcelUtils.WriteData(Constant.Path_TestData + Constant.File_TestData);
 		   }
@@ -168,16 +170,15 @@ public class TestUtil extends TestBase{
 public static void childBrowser_move() throws Exception{
 	Set<String> windows = driver.getWindowHandles();
     Iterator<String> iter = windows.iterator();
-    Constant.PARENT = iter.next();
+    String parent = iter.next();
 // Switch to new window
     driver.switchTo().window(iter.next());
-    }
-
-public static void childBrowser_close() throws Exception{
+    Constant.ACTUAL = driver.findElement(By.xpath("/html/body/form/div[3]/div/span")).getText();
     driver.close();           
 // switch to parent
-    driver.switchTo().window(Constant.PARENT);
+    driver.switchTo().window(parent);
 }
+
 
 	public static void report_moveToAnotherWindow() throws Exception
 	{	
@@ -204,396 +205,6 @@ public static void childBrowser_close() throws Exception{
 		driver.manage().window().maximize();
 		driver.quit();
 	}
-	public static void scrollDown()
-	{
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("scroll(0, 250);");
-	}
-	
-	private boolean isElementPresent(WebDriver driver, By by){
-		try{
-		driver.findElement(by);
-		return true;
-		}catch(NoSuchElementException e){
-		return false;
-		}
-		}
-	public static boolean isSkip(String testCase){
-		for(int WRITE_EXCEL_ROW=2; WRITE_EXCEL_ROW<=datatable.getRowCount("Test Cases");WRITE_EXCEL_ROW++ ){
-			System.out.println("in isSkip");
-	    	  if(datatable.getCellData("Test Cases", "TCID", WRITE_EXCEL_ROW).equals(testCase)){
-	    		  if(datatable.getCellData("Test Cases", "Runmode", WRITE_EXCEL_ROW).equals("Y"))
-	    			  return false;
-	    		  else
-	    			  return true;
-	    	  }
-	    	  
-	      }
-		
-		return false;
-	}
-	public static boolean isSkipSheetRow(String testType){
-		System.out.println("in isSkipSheetRow method");
-		for(int WRITE_EXCEL_ROW_Sheet=2; WRITE_EXCEL_ROW_Sheet<=datatable.getRowCount("OperationalView_ProjectViewTest");WRITE_EXCEL_ROW_Sheet++ ){
-			System.out.println("in isSkipSheetRow");
-	    	  if(datatable.getCellData("OperationalView_ProjectViewTest", "Test_Case", WRITE_EXCEL_ROW_Sheet).equals(testType)){
-	    		  if(datatable.getCellData("OperationalView_ProjectViewTest", "testType", WRITE_EXCEL_ROW_Sheet).equals("TRUE"))
-	    			  return false;
-	    		  else
-	    			  return true;
-	    	  }
-	    	  
-	      }
-		
-		return false;
-	}
-	
-	public static Object[][] getData(String sheetName){
-		// return test data;
-		// read test data from xls
-		
-		int rows=datatable.getRowCount(sheetName)-1;
-		if(rows <=0){
-			Object[][] testData =new Object[1][0];
-			return testData;
-			
-		}
-	    rows = datatable.getRowCount(sheetName);  // 3
-		int cols = datatable.getColumnCount(sheetName);
-		System.out.println("total rows -- "+ rows);
-		System.out.println("total cols -- "+cols);
-		Object data[][] = new Object[rows-1][cols];
-		
-		for( int rowNum = 2 ; rowNum <= rows ; rowNum++){
-			
-			for(int colNum=0 ; colNum< cols; colNum++){
-				data[rowNum-2][colNum]=datatable.getCellData(sheetName, colNum, rowNum);
-			}
-		}
-		
-		return data;
-		
-		
-	}
-	
-	// screenshots
-	public static void takeScreenShot(String fileName) throws IOException{
-		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	    FileUtils.copyFile(scrFile, new File(config.getProperty("screenShotsPath")+"\\"+fileName+".jpg"));	   
-	    
-	}
-	
-	// Robot 
-	public static void setClipboardData(String string) {
-		//StringSelection is a class that can be used for copy and paste operations.
-		   StringSelection stringSelection = new StringSelection(string);
-		   Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-		}
-	
-	public static void uploadFile(String fileLocation) {
-        try {
-        	//Setting clipboard with file location
-            setClipboardData(fileLocation);
-            //native key strokes for CTRL, V and ENTER keys
-            Robot robot = new Robot();
-	
-            robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_V);
-            robot.keyRelease(KeyEvent.VK_V);
-            robot.keyRelease(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_ENTER);
-            robot.keyRelease(KeyEvent.VK_ENTER);
-        } catch (Exception exp) {
-        	exp.printStackTrace();
-        }
-    }
-	
-	
-	// make zip of reports
-	public static void zip(String filepath){
-	 	try
-	 	{
-	 		File inFolder=new File(filepath);
-	 		File outFolder=new File("Reports.zip");
-	 		ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(outFolder)));
-	 		BufferedInputStream in = null;
-	 		byte[] data  = new byte[1000];
-	 		String files[] = inFolder.list();
-	 		for (int WRITE_EXCEL_ROW=0; WRITE_EXCEL_ROW<files.length; WRITE_EXCEL_ROW++)
-	 		{
-	 			in = new BufferedInputStream(new FileInputStream
-	 			(inFolder.getPath() + "/" + files[WRITE_EXCEL_ROW]), 1000);  
-	 			out.putNextEntry(new ZipEntry(files[WRITE_EXCEL_ROW])); 
-	 			int count;
-	 			while((count = in.read(data,0,1000)) != -1)
-	 			{
-	 				out.write(data, 0, count);
-	 			}
-	 			out.closeEntry();
-  }
-  out.flush();
-  out.close();
-	 	
-}
-  catch(Exception e)
-  {
-	  e.printStackTrace();
-  } 
-	 	
- }
-
-}
-
-
-=======
-package util;
-import static org.testng.AssertJUnit.assertTrue;
-
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Set;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
-
-import junit.framework.Assert;
-//import jxl.Workbook;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
-
-import tests.TestBase;
-import utility.Constant;
-import utility.ExcelUtils;
-import utility.ExcelWrite;
-
-
-public class TestUtil extends TestBase{
-
-	public static WebElement element;
-	public static String actual;
-	public static int i=1,COUNT_Business = 1;
-	static String master = driver.getWindowHandle();
-	
-	public static void login(String Username,String Password,String Use_Case){
-		// check if the user is logged in
-		try{
-		if(loggedIn){
-			return ;
-		}		driver.get(config.getProperty("DiasparkEnergySignInURL"));	
-		
-		System.out.println("login url click");		
-		driver.manage().window().maximize();
-	    driver.findElement(By.id("uidWaterMark")).click();
-	    	if(driver.findElement(By.id("uidWaterMark")).isEnabled())
-			{
-	    		System.out.println("hi username");
-				getObject("username_text").clear();
-				getObject("username_text").sendKeys(Username);
-				APPLICATION_LOGS.debug("SignUp:Entered First Name");
-				
-			}
-			else
-			{
-				APPLICATION_LOGS.debug("Login:Unable to Enter Username");
-			}
-			
-	    	
-	    driver.findElement(By.id("txtWaterMark")).click();
-	    	if(driver.findElement(By.id("txtWaterMark")).isEnabled())
-	    	{
-	    		System.out.println("hi password");
-	    		getObject("password_text").clear();
-				getObject("password_text").sendKeys(Password);    		
-	    		System.out.println("put password");
-	    		Thread.sleep(1000L);
-	    	}
-	    	else
-	    	{
-	    		System.out.println("SignUp:Unable to Enter Password");
-	    	}
-	    	
-	    	driver.findElement(By.id("btnLogin")).click();
-	    	
-//	    	System.out.println("Page title is: " + driver.getTitle());
-	    	
-	    	ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Login"); // file_path , file_name and sheet_name are passed 
-			String actual;
-		       //valid email address
-				String title = driver.getTitle();
-			if(Use_Case.equalsIgnoreCase("Login"))
-				
-			{	
-				if(title.equalsIgnoreCase("Diaspark Energy Login"))
-				{
-					actual=driver.findElement(By.xpath("//*[@id='lblErrorMessage']")).getText();
-					ExcelWrite a=new ExcelWrite();
-		        	String expected=ExcelUtils.getCellData(i, 2);  // row_number and colum_number
-		         	a.loginTestResult(expected,actual,i);
-		            ExcelUtils.WriteData(Constant.Path_TestData + Constant.File_TestData);
-				}
-			    else
-			    {
-					System.out.println("***************** IN ELSE****************");					
-					actual = title;
-					ExcelWrite a=new ExcelWrite();				    
-			        String excpected=ExcelUtils.getCellData(i, 2);
-			        a.loginTestResult(excpected,actual,i);
-			        ExcelUtils.WriteData(Constant.Path_TestData + Constant.File_TestData);
-			     }
-				i++;
-			}
-			if(driver.getTitle().equalsIgnoreCase("Diaspark Energy ErrorPage"))
-			{
-				System.out.println("Something is not right , please try after some time.@@@@@@@");
-			}
-			if(Use_Case.equalsIgnoreCase("Project_Overview_Page_test"))
-			{
-				
-			}
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-				
-	}
-	
-	public static void PortfolioImageClick() throws Exception
-	{
-		
-		driver.findElement(By.xpath("html/body/form/div[4]/div[1]/div/div[1]/div/div/div/div[3]/div/ul/li[1]/div/ul/li[5]/a/span/span[2]")).click();
-		System.out.println("*******Reports View clicked");
-		Thread.sleep(1000L);
-	}
-	
-	public static void PortfolioLinkTest(String SrNo,String Feature,String Use_Case,String Test_Case,String Provider,String Username, String Password, String testType) throws Exception, InterruptedException, IOException{
-		
-	          TestUtil.PortfolioImageClick();
-			  driver.findElement(By.xpath("html/body/form/div[4]/div[1]/div/div[2]/div[2]/div[2]/div/table/tbody/tr[1]/td[1]/div/div/div/div[2]/ul/li[1]/a[1]")).click();
-		      TestUtil.moveToAnotherWindow();
-		      ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"PortfolioView");
-		    	System.out.println("write file set");
-				//String actual = driver.findElement(By.xpath("html/body/form/div[3]/div[1]/span")).getText();
-				
-			       
-					//String title = driver.getTitle();
-					System.out.println("********* USECASE****"+Use_Case);
-					if(Use_Case.equalsIgnoreCase("Portfolio_OperationalViews_ReportView"))
-					{	
-					if(actual.equalsIgnoreCase("Report Title: Alerts List"))
-					{
-			       // actual=driver.findElement(By.xpath("//*[@id='viewMessagesPop']")) .getText();
-			        ExcelWrite a=new ExcelWrite();
-			    	
-		        	String excpected=ExcelUtils.getCellData(i, 3);
-		         	a.loginTestResult(excpected,actual,i);
-		            ExcelUtils.WriteData(Constant.Path_TestData + Constant.File_TestData);
-					}
-					else
-					{
-						System.out.println("***************** IN ELSE****************");
-						//actual = title;
-						 ExcelWrite a=new ExcelWrite();
-					    	
-				        	String excpected=ExcelUtils.getCellData(i, 3);
-				         	a.loginTestResult(excpected,actual,i);
-				            ExcelUtils.WriteData(Constant.Path_TestData + Constant.File_TestData);
-					}
-			    	
-					
-					}
-			
-		
-    	i++;
-			
-			System.out.println("value of i = "+i);
-	}
-				
-	public static void logout() throws IOException, InterruptedException{
-		
-			System.out.println("in logout method");
-			
-			        
-			        driver.findElement(By.xpath("html/body/form/div[3]/div/div[2]/ul/li[3]/a/span")).click();  
-			        System.out.println("clicked on admin");
-			        driver.findElement(By.xpath("html/body/form/div[3]/div/div[2]/ul/li[3]/div/div/div[3]/div[2]/a")).click();
-			        System.out.println("clicked on signout");
-		//driver.manage().window().maximize();
-		//Thread.sleep(2000L);
-		//TestUtil.takeScreenShot("logout");
-		//Thread.sleep(2000L);
-		//getObject("log_out").click();
-			        
-		
-	}
-	
-	public static void startApplication() throws IOException, InterruptedException{
-		driver.manage().window().maximize();
-		Thread.sleep(2000L);
-		Thread.sleep(2000L);
-		getObject("start_application").click();
-	}
-	
-	public static void moveToAnotherWindow() throws IOException, InterruptedException{
-		Set<String> windows = driver.getWindowHandles();
-	      Iterator<String> iter = windows.iterator();
-	      System.out.println(driver.getWindowHandles().size());
-	       String parent = iter.next();
-
-	// Switch to new window
-	      driver.switchTo().window(iter.next());
-	      actual = driver.findElement(By.xpath("html/body/form/div[3]/div[1]/span")).getText();
-	     System.out.println(actual);
-	
-	     System.out.println("*************************************");
-	
-	
-	     driver.close();
-	// switch to parent
-			//driver.switchTo().window(parent);
-			//driver.findElement(By.xpath("html/body/form/div[3]/div/div[2]/ul/li[3]/a/span")).click();
-			//System.out.println("admin clicked");
-			Thread.sleep(2000L);
-			
-			//driver.findElement(By.xpath("html/body/form/div[3]/div/div[2]/ul/li[3]/div/div/div[3]/div[2]/a")).click();
-			//System.out.println("signout clicked");
-			//Thread.sleep(2000L);
-	
-	
-	}
-	
-	public static void quitBrowser() throws IOException{
-		driver.manage().window().maximize();
-		driver.quit();
-	}
-	
 	public static void scrollDown()
 	{
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -737,7 +348,7 @@ public class TestUtil extends TestBase{
 				System.out.println(" O & M clicked");
 			}
 		
-		if(Use_Case.equalsIgnoreCase("Project_Operation_Planned_Outage_Page_test") || (Use_Case.equalsIgnoreCase("Project_sub_menus")))
+		if(Use_Case.equalsIgnoreCase("Planned_Outage_Page_test") || (Use_Case.equalsIgnoreCase("Project_sub_menus")))
 			{	
 				driver.findElement(By.xpath(OR.getProperty("projects_link"))).click(); // Project link click call 
 				System.out.println("clicked project");
@@ -797,7 +408,7 @@ public class TestUtil extends TestBase{
 		driver.findElement(By.xpath(OR.getProperty("denergy_logo"))).click();
 	}
 	
-	public static void plannedOutagePageElements(String st_date, String end_date) throws InterruptedException{
+	public static void plannedOutagePageElements(String st_date, String end_date,String Use_Case) throws InterruptedException, Exception{
 		driver.findElement(By.xpath(OR.getProperty("project_operations_link"))).click();
 		System.out.println("Project Operation link clicked");
 		driver.findElement(By.xpath(OR.getProperty("st_date_select"))).click();									 
@@ -849,8 +460,17 @@ public class TestUtil extends TestBase{
 				{
 					System.out.println("Something is not right........");
 				}
-		}
+
+            Constant.ACTUAL=driver.findElement(By.id("lblMessage")).getText();
+			System.out.println("****************"+Constant.ACTUAL);
+			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,Use_Case);
+			System.out.println("++++++++++++++++++   "+ExcelUtils.getCellData(1, 3));
+				excelWrite(WRITE_EXCEL_ROW, Constant.ACTUAL, Use_Case);
 		
+
+//////////
+
+		}	
 	}
 	
 	public static void isAlertPresent() throws InterruptedException
@@ -1149,7 +769,8 @@ public class TestUtil extends TestBase{
 		
 	}
 	
+	
 }
 
 
->>>>>>> 414c2983c9de47ba534f12add8583362dbd8e871
+

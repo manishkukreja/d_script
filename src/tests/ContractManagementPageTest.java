@@ -19,14 +19,14 @@ public class ContractManagementPageTest extends TestBase {
 	public static void contractManagementTest(String SrNo,String Feature,String Use_Case,String Test_Case,String Provider,String Username, String Password, String testType) throws Exception  {
 				TestUtil.login(Username, Password, Use_Case);
 				TestUtil.clickSideBar(Use_Case);
-				if(testType.equalsIgnoreCase("True"))
-				{	
+				//if(testType.equalsIgnoreCase("True"))
+				//{	
 					TestUtil.contractManagementPageElements();
-				}
-				else
+				//}
+				/*else
 				{
 					System.out.println("Please set the Test type to True");
-				}
+				}*/
 	}			
 				
 	@DataProvider

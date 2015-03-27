@@ -100,24 +100,17 @@ public class OperationalView_ProjectView extends TestBase{
 	   Thread.sleep(2000L);
 	   getObject("operational_project_componentData_chkImg3").click();
 	   Thread.sleep(2000L);
+	   System.out.println("view button clicking");
 	   getObject("operational_project_componentData_viewBtn").click();
+		 Thread.sleep(3000L);
+	   System.out.println("view button clicked");
+	   
 	   TestUtil.childBrowser_move();
-	   Constant.ACTUAL = driver.findElement(By.xpath("/html/body/form/div[3]/div/span")).getText();
-	   getObject("operational_project_componentData_Report_DwnlodBtn").click();
-	   getObject("operational_project_componentData_Report_FileBtn").click();
-	   Thread.sleep(2000L);
-	   //Execute Script To Download File.exe file to run AutoIt script. File location = C:\\Users\\sumit.kothari\\Desktop\\download.exe
-	    Process pb=new ProcessBuilder("C:\\Users\\sumit.kothari\\Desktop\\ddd.exe","FireFox","C:\\Users\\sumit.kothari\\Desktop\\ddd.exe","10").start(); 
-	    Thread.sleep(4000L);
-	    // Runtime.getRuntime().exec("C:\\Users\\sumit.kothari\\Desktop\\ddd.exe");
-	    //child browser closed    
-	    driver.close();  
-	    TestUtil.childBrowser_close();
+	 
 	    ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,Use_Case);
 		TestUtil.excelWrite(Constant.WRITE_EXCEL_ROW,Constant.ACTUAL,Use_Case);
 		Constant.WRITE_EXCEL_ROW++;
-	// switch to parent
-			//driver.switchTo().window(Constant.PARENT);
+	  
 			
   }
 	

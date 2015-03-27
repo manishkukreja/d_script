@@ -23,7 +23,10 @@ public class OperationalView_ReportView extends TestBase{
 	{
 		System.out.println("in my class+++++++++++++++++++++++++");
 		TestUtil.PortfolioImageClick();
+		//driver.findElement(By.xpath("html/body/form/div[4]/div[1]/div/div[1]/div/div/div/div[1]/a")).click();
+		//driver.findElement(By.xpath("html/body/form/div[4]/div[1]/div/div[1]/div/div/div/div[3]/div/ul/li[1]/a/span/span[2]")).click();
 		getObject("reports_view_click").click();
+				//driver.findElement(By.xpath("html/body/form/div[4]/div[1]/div/div[1]/div/div/div/div[3]/div/ul/li[1]/div/ul/li[4]/a/span/span[2]"));
 		Thread.sleep(1000L);
 		 int exceptionReport_count_last=0;
 		 int srecFinance_count_last=0;

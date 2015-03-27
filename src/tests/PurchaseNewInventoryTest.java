@@ -23,10 +23,10 @@ public class PurchaseNewInventoryTest extends TestBase {
 		TestUtil.login(Username, Password, Use_Case);
 		TestUtil.clickSideBar(Use_Case);
 		
-		if(Scenario.equalsIgnoreCase("inventory purchase"))
-			{
+		//if(Scenario.equalsIgnoreCase("inventory purchase"))
+			//{
 				TestUtil.newInventory(EquipmentType, Manufacturer, Model,  Quantity,  PurchaseDate);
-			}
+		//	}
 		
 	}			
 		
